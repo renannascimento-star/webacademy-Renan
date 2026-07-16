@@ -16,8 +16,6 @@ jobs:
         needs: primeiro-job
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout
-              uses: actions/checkout@v5
             - name: Organização mínima do projeto.
               run: |
                 echo "Verificando arquivos obrigatórios..."
@@ -31,15 +29,4 @@ jobs:
 
 
 
-# Atividade 02.5 - Criando múltiplos Jobs
-# Crie Job 1
-# Responsável por:
-# checkout;
-# data;
-# versão do Git.
-# Crie Job 2
-# Responsável por:
-# verificar README;
-# verificar LICENSE;
-# verificar .gitignore.
-# Faça com que o segundo job execute somente após o primeir
+
