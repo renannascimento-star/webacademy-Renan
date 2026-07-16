@@ -9,7 +9,8 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v5
             - name: Organização mínima do projeto.
-              run:  echo "Verificando arquivos obrigatórios..."
+              run: |
+                echo "Verificando arquivos obrigatórios..."
                 for file in README.md LICENSE .gitignore; do
                   if [ ! -f "$file" ]; then
                     echo "Arquivo ausente; $file"
