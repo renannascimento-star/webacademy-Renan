@@ -12,7 +12,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v5
             - name: nome do curso
-              run: "Curso; $CURSO"
+              run: echo "Curso; $CURSO"
             - name: usuário que executou o workflow 
               run: echo "Usuário; ${{github.actor}}"
             - name: nome do repositório
