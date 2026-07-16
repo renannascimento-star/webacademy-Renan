@@ -16,6 +16,8 @@ jobs:
         needs: primeiro-job
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout
+              uses: actions/checkout@v5
             - name: Organização mínima do projeto.
               run: |
                 echo "Verificando arquivos obrigatórios..."
