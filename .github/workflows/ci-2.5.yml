@@ -1,0 +1,45 @@
+name: atividade Workflow 2.5
+
+on:
+    push:
+jobs:
+    primeiro-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v5
+            - name: data e hora da execução
+              run: date
+            - name: versão do Git.
+              run: git --version
+    segundo-job:
+        needs: primeiro-job
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v5
+            - name: Organização mínima do projeto.
+              run: |
+                echo "Verificando arquivos obrigatórios..."
+                for file in README.md LICENSE .gitignore; do
+                  if [ ! -f "$file" ]; then
+                    echo "Arquivo ausente; $file"
+                    exit 1
+                  fi
+                done
+                echo "Todos os arquivos obrigatórios estão presentes."
+
+
+
+# Atividade 02.5 - Criando múltiplos Jobs
+# Crie Job 1
+# Responsável por:
+# checkout;
+# data;
+# versão do Git.
+# Crie Job 2
+# Responsável por:
+# verificar README;
+# verificar LICENSE;
+# verificar .gitignore.
+# Faça com que o segundo job execute somente após o primeir
