@@ -1,0 +1,18 @@
+name: atividade Workflow 2.2 
+
+on:
+    push:
+jobs:
+    primeiro-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: data e hora da execução
+              run: date
+            - name: sistema operacional utilizado pelo runner
+              run: uname -a
+            - name: versão do Git.
+              run: git --version
+            - name: conteúdo do arquivo README.md
+              run: cat README.md
+            - name: Lista dos arquivos do projeto.
+              run: ls -la

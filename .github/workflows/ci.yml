@@ -1,4 +1,4 @@
-name: Primeiro Workflow
+name: atividade Workflow 2.1
 
 on:
     push:
