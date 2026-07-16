@@ -13,3 +13,25 @@ jobs:
               run: ls ${{ github.workspace }}
             - name: Status
               run: echo "Status ${{ job.status }}."
+            - name: data e hora da execução
+              run: echo "Data:" date
+            - name: sistema operacional utilizado pelo runner
+              run: uname -a
+            - name: versão do Git.
+              run: echo "a versão do git é:" git --version
+            - name: conteúdo do arquivo README.md
+              run: cat README.md
+            - name: Lista dos arquivos do projeto.
+              run: ls -la
+            
+            
+
+
+
+# Atividade 02.2 – Acrescentando novas etapas ao workflow
+# Faça as seguintes modificações:
+# Exiba a data e hora da execução.
+# Exiba o sistema operacional utilizado pelo runner.
+# Exiba a versão do Git.
+# Exiba o conteúdo do arquivo README.md.
+# Ao final, liste novamente os arquivos do projeto.
