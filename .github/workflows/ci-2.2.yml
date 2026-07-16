@@ -6,6 +6,8 @@ jobs:
     primeiro-job:
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout
+              uses: actions/checkout@v5
             - name: data e hora da execução
               run: date
             - name: sistema operacional utilizado pelo runner

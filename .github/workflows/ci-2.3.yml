@@ -1,0 +1,30 @@
+name: atividade Workflow 2.1
+
+on:
+    push:
+jobs:
+    primeiro-job:
+        runs-on: ubuntu-latest
+        env:
+            CURSO: Integração Contínua
+        steps:
+            - run: echo "Primeiro passo"
+            - name: Checkout
+              uses: actions/checkout@v5
+            - name: nome do curso
+              run: "Curso; $CURSO"
+            - name: usuário que executou o workflow 
+              run: echo "Usuário; ${{github.actor}}"
+            - name: nome do repositório
+              run: echo "Repositório; ${{github.repository}}"
+            - name: branch utilizada
+              run: echo "Branch; ${{github.ref_name}}"
+
+            
+# Faça as seguintes modificações
+# Crie uma variável chamada CURSO com o valor Integração Contínua
+# Depois exiba:
+# nome do curso;
+# usuário que executou o workflow;
+# nome do repositório;
+# branch utilizada.
