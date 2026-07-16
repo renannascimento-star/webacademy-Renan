@@ -1,4 +1,4 @@
-name: atividade Workflow 2.1
+name: atividade Workflow 2.3
 
 on:
     push:
@@ -21,10 +21,3 @@ jobs:
               run: echo "Branch; ${{github.ref_name}}"
 
             
-# Faça as seguintes modificações
-# Crie uma variável chamada CURSO com o valor Integração Contínua
-# Depois exiba:
-# nome do curso;
-# usuário que executou o workflow;
-# nome do repositório;
-# branch utilizada.

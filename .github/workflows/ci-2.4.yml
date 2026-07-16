@@ -1,0 +1,31 @@
+name: atividade Workflow 2.4
+
+on:
+    push:
+jobs:
+    primeiro-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v5
+            - name: Organização mínima do projeto.
+              run:  echo "Verificando arquivos obrigatórios..."
+                for file in README.md LICENSE .gitignore; do
+                  if [ ! -f "$file" ]; then
+                    echo "Arquivo ausente; $file"
+                    exit 1
+                  fi
+                done
+                echo "Todos os arquivos obrigatórios estão presentes."
+
+
+
+
+# Criar um pipeline que valide a organização mínima do projeto.
+# O workflow deverá verificar se existem:
+# README.md
+# LICENSE
+# .gitignore
+# Caso algum arquivo não exista, o workflow deverá falhar.
+# Faça um teste removendo temporariamente um dos arquivos e observe a falha do workflow.
+# Depois restaure o arquivo e execute novamente.
