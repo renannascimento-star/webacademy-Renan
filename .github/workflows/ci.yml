@@ -14,11 +14,11 @@ jobs:
             - name: Status
               run: echo "Status ${{ job.status }}."
             - name: data e hora da execução
-              run: echo "Data:" date
+              run: date
             - name: sistema operacional utilizado pelo runner
               run: uname -a
             - name: versão do Git.
-              run: echo "a versão do git é:" git --version
+              run: git --version
             - name: conteúdo do arquivo README.md
               run: cat README.md
             - name: Lista dos arquivos do projeto.
